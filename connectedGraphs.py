@@ -38,8 +38,8 @@ def connectedGraphs():
 		ctr += 1
 
 	for keys in dict_obj:
-		temp.add(set(dict_obj[keys][0]) & set(dict_obj[keys][1]))
-		print (temp)
+		temp = set(dict_obj[keys][0]) & set(dict_obj[keys][1])
+		temp_store.add(temp)
 
 		"""
 		if temp > thresh:
@@ -47,7 +47,7 @@ def connectedGraphs():
 		else:
 			res_bool += 1
 		"""
-	return res_bool
+	return temp_store
 
 
 
